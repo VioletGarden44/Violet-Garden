@@ -1,0 +1,96 @@
+.songs-list {
+
+    position: absolute;
+
+    left: 55%;
+
+    top: 18%;
+
+    width: 320px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+.song-item {
+
+    font-size: 22px;
+
+    font-family: "Caveat", cursive;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+
+}
+
+.song-item:hover {
+
+    transform: scale(1.03);
+
+}
+
+#songs-prev-leaf{
+
+    position:absolute;
+
+    width:270px;
+
+    left:-80px;
+
+    top:540px;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+
+}
+
+#songs-prev-leaf:hover{
+
+    transform:scale(1.05);
+
+}
+
+#songs-next-leaf{
+
+    position:absolute;
+
+    width:270px;
+
+    right:-100px;
+
+    top:540px;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+
+}
+
+#songs-next-leaf:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+.songs-image-page {
+
+    position: absolute;
+
+}
+
+#songs-page-image {
+
+    position: absolute;
+
+    left: 90px;
+    top: 120px;
+
+    width: 360px;
+}

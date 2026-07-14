@@ -1,0 +1,149 @@
+const newSession = sessionStorage.getItem("gardenStarted");
+
+if (!newSession) {
+
+    localStorage.removeItem("currentScene");
+
+    localStorage.removeItem("notebookOpen");
+
+    localStorage.removeItem("currentPage");
+
+    sessionStorage.setItem("gardenStarted", "true");
+
+}
+
+function changeScene(sceneNumber) {
+
+    const scenes = document.querySelectorAll(".scene");
+
+    scenes.forEach(scene => {
+
+        scene.style.display = "none";
+
+    });
+
+
+    const activeScene = document.querySelector(`.scene-${sceneNumber}`);
+
+    if (activeScene) {
+
+        activeScene.style.display = "block";
+
+    }
+
+    localStorage.setItem("currentScene", sceneNumber);
+
+}
+
+const savedScene = localStorage.getItem("currentScene");
+
+
+if (savedScene) {
+    changeScene(savedScene);
+} else {
+    changeScene(1);
+}
+
+
+document.addEventListener("click", (event) => {
+    if (event.target.id === "scene-next-leaf") {
+        changeScene(2);
+    }
+
+});
+
+document.addEventListener("click", (event) => {
+    if (event.target.id === "scene-prev-leaf") {
+        changeScene(1);
+    }
+
+});
+
+document.addEventListener("click", (event) => {
+    if (event.target.id === "scene-prev-leaf-2") {
+        changeScene(2);
+    }
+
+});
+
+document.addEventListener("click", (event) => {
+    if (event.target.id === "scene-next-leaf-2") {
+        changeScene(3);
+    }
+
+});
+
+
+document.addEventListener("click", (event) => {
+    if (event.target.id === "gazebo") {
+        changeScene(3);
+    }
+
+});
+
+document.addEventListener("click", (event) => {
+
+    if (event.target.id === "scene4-prev-leaf") {
+        changeScene(1);
+    }
+
+});
+
+document.addEventListener("click", (event) => {
+
+    if (event.target.id === "scene4-object") {
+        changeScene(5);
+    }
+
+});
+
+document.addEventListener("click", (event) => {
+
+    if (event.target.id === "scene5-prev-leaf") {
+        changeScene(4);
+    }
+
+});
+
+/*przejscie z 5 do 4 sceny*/
+document.addEventListener("click", (event) => {
+
+    if (event.target.id === "scene5-return-object") {
+        changeScene(4);
+    }
+});
+
+/*przejscie z 5 do 4 sceny*/
+document.addEventListener("click", (event) => {
+    if (event.target.id === "scene4-return-object") {
+        changeScene(1);
+    }
+});
+
+/*przejscie z 3 do 2 sceny*/
+document.addEventListener("click", (event) => {
+    if (event.target.id === "scene3-next-object") {
+        changeScene(2);
+    }
+});
+
+/*przejscie z 2 do 1 sceny*/
+document.addEventListener("click", (event) => {
+    if (event.target.id === "scene2-return-object") {
+        changeScene(1);
+    }
+});
+
+/*przejscie z 1 do 2 sceny*/
+document.addEventListener("click", (event) => {
+    if (event.target.id === "scene1-next-object") {
+        changeScene(2);
+    }
+});
+
+/*przejscie z 1 do 4 sceny*/
+document.addEventListener("click", (event) => {
+    if (event.target.id === "scene1-2-next-object") {
+        changeScene(4);
+    }
+});

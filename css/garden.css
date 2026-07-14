@@ -1,0 +1,600 @@
+.garden {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #000;
+}
+
+
+.background-blur {
+    position: absolute;
+    inset: 0;
+    background-image: url("../assets/background/garden.png");
+    background-size: cover;
+    background-position: center;
+    filter: blur(12px);
+    transform: scale(1.08);
+    opacity: 0.75;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+    background-blend-mode: multiply;
+}
+
+
+.scene {
+    position: absolute;
+
+    width: 2752px;
+    height: 1536px;
+
+    left: 50%;
+    top: 50%;
+
+    transform-origin: center center;
+    z-index: 1;
+}
+
+
+.garden-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    user-select: none;
+    pointer-events: none;
+}
+
+
+.garden-table {
+    position: absolute;
+
+    width: 800px;
+}
+
+
+.garden-notebook {
+    width: 200px;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+    transform-origin: center;
+}
+
+
+.notebook-area {
+    position: absolute;
+
+    left: 380px;
+
+    top: 20px;
+
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+
+.notebook-area:hover .garden-notebook {
+    transform: scale(1.2);
+}
+
+
+.table-area {
+    position: absolute;
+
+    left: 38%;
+
+    top: 42%;
+
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+
+#velvet,
+#velvet-scene2,
+#velvet-scene3 {
+    position: absolute;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+/* SCENA 1 */
+#velvet {
+    left: 1150px;
+    bottom: 450px;
+
+    width: 400px;
+}
+/* SCENA 2 */
+#velvet-scene2 {
+    left: 800px;
+    bottom: 200px;
+
+    width: 700px;
+}
+/* SCENA 3 */
+#velvet-scene3 {
+    left: 580px;
+    bottom: 170px;
+
+    width: 700px;
+}
+
+
+.scene3-notebook {
+    position: absolute;
+    left: 180px;
+    top: 350px;
+    width: 300px;
+    z-index: 3;
+}
+
+#scene-next-leaf,
+#scene-next-leaf-2,
+#scene-prev-leaf,
+#scene-prev-leaf-2 {
+    position: absolute;
+
+    width: 300px;
+    
+    z-index: 5;
+
+    cursor: pointer;
+}
+
+#scene-next-leaf {
+    left: 2100px;
+    top: 700px;
+
+    opacity: 0;
+
+    transition: opacity .3s ease;
+}
+
+#scene-prev-leaf {
+    left: 50px;
+    top: 1350px;
+
+    opacity: 0;
+
+    transition: opacity .3s ease;
+}
+
+#scene-prev-leaf-2 {
+    left: 50px;
+    top: 1300px;
+
+    opacity: 0;
+
+    transition: opacity .3s ease;
+}
+
+
+#velvet-dialog {
+    position: absolute;
+
+    left: 1250px;
+    bottom: 1150px;
+
+    width: 760px;
+
+    min-height: 120px;
+    padding: 28px 36px;
+    background: rgba(255,255,255,0.95);
+    border: 3px solid #3d2d22;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-family: "Caveat", cursive;
+    font-size: 58px;
+    line-height: 1.25;
+    color: #2d1b12;
+    text-align: center;
+    display: none;
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+#velvet-dialog::after,
+#velvet-dialog-2::after,
+#velvet-dialog-3::after,
+#velvet-dialog-4::after,
+#velvet-dialog-5::after {
+    content: "";
+    position: absolute;
+    left: 70px;
+    bottom: -22px;
+    width: 34px;
+    height: 34px;
+    background: rgba(255,255,255,0.95);
+    border-right: 3px solid #3d2d22;
+    border-bottom: 3px solid #3d2d22;
+
+    transform: rotate(45deg);
+}
+
+#velvet-dialog-2 {
+    position: absolute;
+
+    left: 1150px;
+    bottom: 1150px;
+
+    width: 660px;
+
+    min-height: 120px;
+    padding: 28px 36px;
+    background: rgba(255,255,255,0.95);
+    border: 3px solid #3d2d22;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-family: "Caveat", cursive;
+    font-size: 58px;
+    line-height: 1.25;
+    color: #2d1b12;
+    text-align: center;
+    display: none;
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+#velvet-dialog-3 {
+    position: absolute;
+
+    left: 750px;
+    bottom: 1050px;
+
+    width: 860px;
+
+    min-height: 120px;
+    padding: 28px 36px;
+    background: rgba(255,255,255,0.95);
+    border: 3px solid #3d2d22;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-family: "Caveat", cursive;
+    font-size: 58px;
+    line-height: 1.25;
+    color: #2d1b12;
+    text-align: center;
+    display: none;
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+
+
+#gazebo {
+    position: absolute;
+
+    left: 2070px;
+    bottom: 700px;
+
+    width: 380px;
+
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity .3s ease, transform .35s ease;
+    transform-origin: center;
+}
+
+#gazebo:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#garden-fox {
+    position: absolute;
+
+    left: 1650px;
+    bottom: 470px;
+
+    width: 250px;
+
+    z-index: 2;
+}
+
+
+#secret-leaf {
+    position: absolute;
+
+    left: 50px;
+    top: 1300px;
+
+    width: 300px;
+
+    z-index: 5;
+
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+#secret-leaf:hover {
+    opacity: 1;
+}
+
+
+
+/*przycisk przejscia z 4 do 5 sceny*/
+#scene4-object {
+    position: absolute;
+
+    left: 2030px;
+    top: 640px;
+
+    width: 300px;
+
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity .3s ease, transform .35s ease;
+    transform-origin: center;
+}
+
+#scene4-object:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#wizi {
+    position: absolute;
+
+    left: 1050px;
+    bottom: 50px;
+
+    width: 900px;
+
+    z-index: 2;
+
+    pointer-events: auto;
+}
+
+#wizi-dialog {
+    position: absolute;
+
+    left: 1350px;
+    bottom: 1090px;
+
+    width: 560px;
+
+    min-height: 120px;
+    padding: 28px 36px;
+    background: rgba(255,255,255,0.95);
+    border: 3px solid #3d2d22;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-family: "Caveat", cursive;
+    font-size: 58px;
+    line-height: 1.25;
+    color: #2d1b12;
+    text-align: center;
+    display: none;
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+
+#wizi-dialog::after {
+    content: "";
+    position: absolute;
+    left: 70px;
+    bottom: -22px;
+    width: 34px;
+    height: 34px;
+    background: rgba(255,255,255,0.95);
+    border-right: 3px solid #3d2d22;
+    border-bottom: 3px solid #3d2d22;
+    transform: rotate(45deg);
+}
+
+/*velvet scena 5*/
+#velvet-scene5 {
+
+    position: absolute;
+
+    left: 700px;
+    bottom: 100px;
+
+    width: 690px;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+#velvet-dialog-5 {
+    position: absolute;
+
+    left: 1100px;
+    bottom: 1280px;
+
+    width: 760px;
+
+    min-height: 120px;
+    padding: 28px 36px;
+    background: rgba(255,255,255,0.95);
+    border: 3px solid #3d2d22;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-family: "Caveat", cursive;
+    font-size: 58px;
+    line-height: 1.25;
+    color: #2d1b12;
+    text-align: center;
+    display: none;
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+/*velvet scena 4*/
+#velvet-scene4 {
+    position: absolute;
+
+    left: 1250px;
+    bottom: 250px;
+
+    width: 500px;
+
+    z-index: 2;
+    pointer-events: auto;
+}
+
+#velvet-dialog-4  {
+    position: absolute;
+
+    left: 1450px;
+    bottom: 910px;
+
+    width: 560px;
+
+    min-height: 120px;
+    padding: 28px 36px;
+    background: rgba(255,255,255,0.95);
+    border: 3px solid #3d2d22;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-family: "Caveat", cursive;
+    font-size: 58px;
+    line-height: 1.25;
+    color: #2d1b12;
+    text-align: center;
+    display: none;
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+/*przycisk powrotu scena 5*/
+#scene5-return-object {
+    position: absolute;
+
+    left: 75px;
+    top: 440px;
+
+    width: 290px;
+
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity .3s ease, transform .35s ease;
+    transform-origin: center;
+}
+
+#scene5-return-object:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/*przycisk przejscia z 4 do 1 sceny*/
+#scene4-return-object {
+    position: absolute;
+
+    left: 621px;
+    top: 740px;
+
+    width: 500px;
+
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity .3s ease, transform .35s ease;
+    transform-origin: center;
+}
+
+#scene4-return-object:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/*przycisk przejscia z 4 do 1 sceny*/
+#scene2-return-object {
+    position: absolute;
+
+    left: 0px;
+    top: 1400px;
+
+    width: 500px;
+
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity .3s ease, transform .35s ease;
+    transform-origin: center;
+}
+
+#scene2-return-object:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/*przycisk przejscia z 3 do 2 sceny*/
+#scene3-next-object {
+    position: absolute;
+
+    left: 1190px;
+    top: 420px;
+
+    width: 430px;
+
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity .3s ease, transform .35s ease;
+    transform-origin: center;
+}
+
+#scene3-next-object:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/*przycisk przejscia z 1 do 2 sceny*/
+#scene1-next-object {
+    position: absolute;
+
+    left: 2250px;
+    top: 400px;
+
+    width: 300px;
+
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity .3s ease, transform .35s ease;
+    transform-origin: center;
+}
+
+#scene1-next-object:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/*przycisk przejscia z 1 do 2 sceny*/
+#scene1-2-next-object {
+    position: absolute;
+
+    left: 0px;
+    top: 480px;
+
+    width: 150px;
+
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity .3s ease, transform .35s ease;
+    transform-origin: center;
+}
+
+#scene1-2-next-object:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}

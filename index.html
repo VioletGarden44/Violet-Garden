@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Violet Garden</title>
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/garden.css">
+    <link rel="stylesheet" href="css/notebook.css">
+    <link rel="stylesheet" href="css/songs.css">
+    <link rel="stylesheet" href="css/track.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<main class="garden">
+
+    <div class="background-blur"></div>
+
+    <div class="scene scene-1">
+
+        <img
+            class="garden-background"
+            src="assets/background/garden.png"
+            alt="Ogród Violet Garden">
+
+        <img
+            id="velvet"
+            src="assets/images/characters/velvet.png"
+            alt="Velvet">
+
+            <div id="velvet-dialog">
+                Jestem Velvet.<br>Witaj w moim Violet Garden...<br>Jeśli chcesz rozejrzyj się trochę...
+            </div>
+
+        <img
+            id="garden-fox"
+            src="assets/images/characters/garden-fox.png"
+            alt="Magiczny lisek">
+
+        <img
+            id="scene1-next-object"
+            src="assets/objects/scene1-return.png"
+            alt="Przejście dalej">
+
+        <img
+            id="scene1-2-next-object"
+            src="assets/objects/scene1-return1.png"
+            alt="Przejście dalej">
+
+       
+    </div>
+
+
+
+    <div class="scene scene-2" style="display: none;">
+
+        <img
+            class="garden-background"
+            src="assets/background/garden-p1.png"
+            alt="Scena 2">
+
+        <img
+            id="velvet-scene2"
+            src="assets/images/characters/velvet-scene2.png"
+            alt="Velvet">
+
+            <div id="velvet-dialog-2">
+                Ta ścieżka prowadzi do mojej altany.<br>
+                Chcesz zobaczyć co w niej mam?
+            </div>
+            
+        <img
+            id="scene2-return-object"
+            src="assets/objects/scene2-return.png"
+            alt="Przejście dalej">
+        
+        <img
+            id="gazebo"
+            src="assets/objects/gazebo.png"
+            alt="Altana">
+
+    </div>
+
+    <div class="scene scene-3" style="display: none;">
+
+        <img
+            class="garden-background"
+            src="assets/background/garden-p2.png"
+            alt="Scena 3">
+
+        <img
+            id="velvet-scene3"
+            src="assets/images/characters/velvet-scene3.png"
+            alt="Velvet">
+
+        <div id="velvet-dialog-3">
+            Uwielbiam tą ciszę... <br>Właśnie wtedy zapisuje swoje myśli w notesie.<br>Możesz zajrzeć do środka...
+        </div>
+
+        <img
+            id="scene3-next-object"
+            src="assets/objects/scene3-return.png"
+            alt="Przejście dalej">
+            
+
+        <div class="scene-trigger scene3-back-trigger"></div> 
+
+        <div class="table-area">
+            
+            <div class="notebook-area">
+
+                <img
+                    id="notebook"
+                    class="garden-notebook scene3-notebook"
+                    src="assets/notebook/notebook-closed.png"
+                    alt="Zamknięty notes">
+            </div>
+        </div>
+    </div>
+
+    <div class="notebook-page">
+        
+        <div class="open-notebook-area">
+
+            <img
+                class="open-notebook"
+                src="assets/notebook/notebook-open.png"
+                alt="Otwarty notes">
+
+                <div id="notebook-container" class="notebook-content">
+                </div>
+
+            <img
+                id="return-leaf"
+                src="assets/ui/leaf-return.png"
+                alt="Powrót do ogrodu">
+
+        </div>
+
+    </div>
+
+
+    <div class="scene scene-4" style="display: none;">
+
+        <img
+            class="garden-background"
+            src="assets/background/garden-p3.png"
+            alt="Scena 4">
+
+        <img
+            id="scene4-return-object"
+            src="assets/objects/scene4-return.png"
+            alt="Powrót">
+
+        <img
+            id="scene4-object"
+            src="assets/objects/secret-place.png"
+            alt="Przejście dalej">
+
+        <img
+            id="velvet-scene4"
+            src="assets/images/characters/velvet-scene4.png"
+            alt="Velvet">
+
+        <div id="velvet-dialog-4">
+            W tej jaskini jest ktoś...<br>wyjątkowy dla mnie...
+        </div>
+
+    </div>
+
+
+    <div class="scene scene-5" style="display: none;">
+
+        <img
+            class="garden-background"
+            src="assets/background/garden-p4.png"
+            alt="Scena 5">
+
+        <img
+            id="wizi"
+            src="assets/images/characters/wizi.png"
+            alt="Wizi">
+
+
+        <div id="wizi-dialog">
+            No heeeeej...
+        </div>
+
+        <img
+            id="scene5-return-object"
+            src="assets/objects/scene5-return.png"
+            alt="Powrót">
+
+        <img
+            id="velvet-scene5"
+            src="assets/images/characters/velvet-scene5.png"
+            alt="Velvet">
+
+
+        <div id="velvet-dialog-5">
+            To jest Wizi mój...<br>Partner... przy tworzeniu strony...
+        </div>
+            
+    </div>
+
+
+
+</main>
+
+
+<script src="js/garden.js"></script>
+<script src="js/notebook.js"></script>
+<script src="js/scenes.js"></script>
+
+
+</body>
+
+</html>
