@@ -43,7 +43,7 @@ function scaleNotebook() {
     const scaleY = window.innerHeight / NOTEBOOK_HEIGHT;
 
 
-    const scale = Math.min(scaleX, scaleY) * 1.5;
+    const scale = Math.min(scaleX, scaleY);
 
 
     notebook.style.transform =
