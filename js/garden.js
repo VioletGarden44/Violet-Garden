@@ -5,8 +5,8 @@ const notebookArea = document.querySelector(".open-notebook-area");
 const SCENE_WIDTH = 2752;
 const SCENE_HEIGHT = 1536;
 
-const NOTEBOOK_WIDTH = 1500;
-const NOTEBOOK_HEIGHT = 1066;
+const NOTEBOOK_WIDTH = 1000;
+const NOTEBOOK_HEIGHT = 710;
 
 function scaleScene() {
 
