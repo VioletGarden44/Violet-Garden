@@ -150,11 +150,10 @@ const notebookNavigationType = performance.getEntriesByType("navigation")[0].typ
 
 
 if (notebookNavigationType === "navigate") {
-
+    sessionStorage.removeItem("visited");
     localStorage.removeItem("notebookOpen");
     localStorage.removeItem("currentPage");
     localStorage.removeItem("songsPage");
-
 }
 
 
