@@ -1,14 +1,12 @@
-const newSession = sessionStorage.getItem("gardenStarted");
+const navigationType = performance.getEntriesByType("navigation")[0].type;
 
-if (!newSession) {
+if (navigationType === "navigate") {
 
     localStorage.removeItem("currentScene");
 
     localStorage.removeItem("notebookOpen");
 
     localStorage.removeItem("currentPage");
-
-    sessionStorage.setItem("gardenStarted", "true");
 
 }
 
