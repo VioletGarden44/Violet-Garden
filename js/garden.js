@@ -325,3 +325,45 @@ function blinkVelvetScene4() {
     setTimeout(blinkVelvetScene4, nextBlink);
 }
 blinkVelvetScene4();
+
+/* lisek scena 2 */
+const foxScene2 = document.getElementById("scene2-fox");
+
+function showFoxScene2() {
+
+    if (!foxScene2) return;
+    foxScene2.classList.add("show");
+    setTimeout(blinkFoxScene2, 800);
+    setTimeout(blinkFoxScene2, 1700);
+    setTimeout(() => {
+        foxScene2.classList.remove("show");
+    }, 2300);
+}
+
+function blinkFoxScene2() {
+
+    if (!foxScene2.classList.contains("show")) return;
+
+    foxScene2.src = "assets/images/characters/scene2-fox-blink.png";
+
+    setTimeout(() => {
+        foxScene2.src = "assets/images/characters/scene2-fox.png";
+    }, 120);
+}
+
+
+// pierwsze pojawienie po wejściu na scenę
+let foxScene2Timer;
+
+function startFoxScene2() {
+
+    clearInterval(foxScene2Timer);
+
+    setTimeout(() => {
+        showFoxScene2();
+    }, 3000);
+
+    foxScene2Timer = setInterval(() => {
+        showFoxScene2();
+    }, 12000);
+}

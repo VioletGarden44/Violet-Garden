@@ -31,6 +31,10 @@ function changeScene(sceneNumber) {
 
     localStorage.setItem("currentScene", sceneNumber);
 
+    if (sceneNumber === 2) {
+        startFoxScene2();
+    }
+
 }
 
 const savedScene = localStorage.getItem("currentScene");

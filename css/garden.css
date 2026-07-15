@@ -598,3 +598,47 @@
     opacity: 1;
     transform: scale(1.1);
 }
+
+/*lisek scena 2*/
+#scene2-fox {
+    position: absolute;
+    width: 250px;
+
+    left: 460px;
+    bottom: 670px;
+
+    z-index: 2;
+    opacity: 0;
+}
+
+#scene2-fox {
+    display: none;
+}
+
+#scene2-fox.show {
+    display: block;
+}
+
+#scene2-fox.show {
+    animation: foxAppear 3.5s linear;
+}
+
+@keyframes foxAppear {
+
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
