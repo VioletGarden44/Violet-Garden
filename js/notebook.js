@@ -150,8 +150,11 @@ const savedPage = localStorage.getItem("currentPage");
 
 const notebookOpen = localStorage.getItem("notebookOpen");
 
+const navigationType = performance.getEntriesByType("navigation")[0].type;
 
-if (notebookOpen === "true" && savedPage) {
+
+if (
+    notebookOpen === "true" && savedPage && navigationType !== "navigate") {
 
     gardenScenes.forEach(scene => {
         scene.style.display = "none";
