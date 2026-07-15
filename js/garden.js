@@ -374,3 +374,45 @@ function startFoxScene2() {
     }, 2000);
 
 }
+
+/*glaskanie liska*/
+const gardenFox = document.getElementById("garden-fox");
+const foxPetting = document.getElementById("fox-petting");
+
+let pettingAnimation;
+
+
+gardenFox.addEventListener("click", () => {
+    // chowamy normalne postacie
+    gardenFox.style.display = "none";
+    velvet.style.display = "none";
+
+    // pokazujemy scenę głaskania
+    foxPetting.style.display = "block";
+
+    let frame = 1;
+
+    pettingAnimation = setInterval(() => {
+
+        if (frame === 1) {
+            foxPetting.src = "assets/images/characters/fox-petting-2.png";
+            frame = 2;
+        } else {
+            foxPetting.src = "assets/images/characters/fox-petting-1.png";
+            frame = 1;
+        }
+    }, 300);
+
+    setTimeout(() => {
+
+        clearInterval(pettingAnimation);
+        foxPetting.style.display = "none";
+
+        gardenFox.style.display = "block";
+        velvet.style.display = "block";
+    }, 3000);
+
+});
+
+
+
