@@ -642,3 +642,13 @@
     }
 
 }
+
+/* glaskanie liska*/
+#fox-petting {
+    display: none;
+    position: absolute;
+
+    width: 550px; /* tutaj ustawiasz wielkość */
+    left: 1400px;  /* przesunięcie w bok */
+    top: 520px;   /* przesunięcie góra/dół */
+}
