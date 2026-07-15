@@ -354,16 +354,23 @@ function blinkFoxScene2() {
 
 // pierwsze pojawienie po wejściu na scenę
 let foxScene2Timer;
+let foxScene2StartTimer;
 
 function startFoxScene2() {
 
     clearInterval(foxScene2Timer);
+    clearTimeout(foxScene2StartTimer);
 
-    setTimeout(() => {
-        showFoxScene2();
-    }, 3000);
+    foxScene2StartTimer = setTimeout(() => {
 
-    foxScene2Timer = setInterval(() => {
         showFoxScene2();
-    }, 12000);
+
+        foxScene2Timer = setInterval(() => {
+
+            showFoxScene2();
+
+        }, 12000);
+
+    }, 2000);
+
 }

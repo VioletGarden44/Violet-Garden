@@ -12,6 +12,8 @@ if (navigationType === "navigate") {
 
 function changeScene(sceneNumber) {
 
+    sceneNumber = Number(sceneNumber);
+
     const scenes = document.querySelectorAll(".scene");
 
     scenes.forEach(scene => {
