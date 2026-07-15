@@ -149,7 +149,7 @@ async function openPage(pageName) {
 const notebookNavigationType = performance.getEntriesByType("navigation")[0].type;
 
 
-if (notebookNavigationType !== "navigate") {
+if (notebookNavigationType === "navigate") {
 
     localStorage.removeItem("notebookOpen");
     localStorage.removeItem("currentPage");
