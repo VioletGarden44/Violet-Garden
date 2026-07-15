@@ -146,15 +146,24 @@ async function openPage(pageName) {
 
 }
 
+const navigationType = performance.getEntriesByType("navigation")[0].type;
+
+
+if (navigationType === "navigate") {
+
+    localStorage.removeItem("notebookOpen");
+    localStorage.removeItem("currentPage");
+    localStorage.removeItem("songsPage");
+
+}
+
+
 const savedPage = localStorage.getItem("currentPage");
 
 const notebookOpen = localStorage.getItem("notebookOpen");
 
-const navigationType = performance.getEntriesByType("navigation")[0].type;
 
-
-if (
-    notebookOpen === "true" && savedPage && navigationType !== "navigate") {
+if (notebookOpen === "true" && savedPage)  {
 
     gardenScenes.forEach(scene => {
         scene.style.display = "none";
