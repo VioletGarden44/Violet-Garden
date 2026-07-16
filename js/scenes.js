@@ -176,7 +176,6 @@ const startScene = params.get("scene");
 
 if(startScene === "6"){
 
-
     document.querySelectorAll(".scene")
     .forEach(scene=>{
         scene.style.display="none";
@@ -185,13 +184,5 @@ if(startScene === "6"){
 
     document.querySelector(".scene-6")
     .style.display="block";
-
-
-    // usuwamy parametr po wejściu
-    window.history.replaceState(
-        null,
-        "",
-        window.location.pathname
-    );
 
 }
