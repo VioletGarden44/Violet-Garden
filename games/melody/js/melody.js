@@ -33,7 +33,7 @@ document
 .getElementById("returnGarden")
 .onclick=()=>{
 
-window.location="../../index.html?scene=6";
+window.location.replace("../../index.html");
 
 }
 
