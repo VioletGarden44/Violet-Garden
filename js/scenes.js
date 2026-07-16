@@ -151,3 +151,38 @@ document.addEventListener("click", (event) => {
         changeScene(4);
     }
 });
+
+/* przejście ze sceny 2 do sceny 6 - gra Velvet */
+document.addEventListener("click", (event) => {
+
+    if (event.target.id === "scene2-game-object") {
+        changeScene(6);
+    }
+
+});
+
+/*przejscie z 6 do 2 sceny*/
+document.addEventListener("click", (event) => {
+
+    if (event.target.id === "scene6-return-object") {
+        changeScene(2);
+    }
+});
+
+const params = new URLSearchParams(window.location.search);
+
+const startScene = params.get("scene");
+
+
+if(startScene === "6"){
+
+    document.querySelectorAll(".scene")
+    .forEach(scene=>{
+        scene.style.display="none";
+    });
+
+
+    document.querySelector(".scene-6")
+    .style.display="block";
+
+}

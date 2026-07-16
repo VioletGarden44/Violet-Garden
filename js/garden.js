@@ -415,4 +415,109 @@ gardenFox.addEventListener("click", () => {
 });
 
 
+/* velvet scena 6 */
+
+const velvetScene6 = document.getElementById("velvet-scene6");
+const velvetScene6Dialog = document.getElementById("velvet-dialog-6");
+
+const scene6Yes = document.getElementById("scene6-yes");
+const scene6No = document.getElementById("scene6-no");
+const scene6Area = document.getElementById("scene6-area");
+
+let scene6Hover = false;
+let scene6Active = false;
+
+function blinkScene6() {
+
+    if (!scene6Hover) {
+
+        velvetScene6.src =
+        "assets/images/characters/velvet-scene6-blink.png";
+
+        setTimeout(() => {
+
+            if (!scene6Hover) {
+
+                velvetScene6.src =
+                "assets/images/characters/velvet-scene6.png";
+
+            }
+
+        },120);
+
+    }
+
+    const nextBlink = 2500 + Math.random() * 4500;
+
+    setTimeout(blinkScene6,nextBlink);
+
+}
+
+blinkScene6();
+
+scene6Area.addEventListener("mouseenter", () => {
+
+    scene6Hover = true;
+    scene6Active = true;
+
+    velvetScene6.src =
+    "assets/images/characters/velvet-scene6-hover.png";
+
+    velvetScene6Dialog.style.display = "block";
+
+    scene6Yes.style.display = "block";
+    scene6No.style.display = "block";
+
+});
+
+
+scene6Area.addEventListener("mouseleave", () => {
+
+    scene6Hover = false;
+    scene6Active = false;
+
+    velvetScene6.src =
+    "assets/images/characters/velvet-scene6.png";
+
+    velvetScene6Dialog.style.display = "none";
+
+    scene6Yes.style.display = "none";
+    scene6No.style.display = "none";
+
+});
+
+document.addEventListener("mousemove", () => {
+
+    if (!scene6Active) {
+
+        scene6Yes.style.display = "none";
+        scene6No.style.display = "none";
+
+        velvetScene6Dialog.style.display = "none";
+
+        velvetScene6.src =
+        "assets/images/characters/velvet-scene6.png";
+
+    }
+
+});
+
+scene6No.addEventListener("click", () => {
+
+    scene6Yes.style.display = "none";
+    scene6No.style.display = "none";
+
+    velvetScene6Dialog.style.display = "none";
+
+    velvetScene6.src =
+    "assets/images/characters/velvet-scene6.png";
+
+});
+
+scene6Yes.addEventListener("click", () => {
+
+    window.location.href = "games/melody/index.html";
+
+});
+
 
